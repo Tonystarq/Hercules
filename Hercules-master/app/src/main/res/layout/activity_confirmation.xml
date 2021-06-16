@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    tools:context=".SplashScreen.SplashScreen">
+
+    <ImageView
+        android:id="@+id/back_login"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:src="@drawable/back_arrow"
+        app:tint="@color/text_color" />
+
+
+    <TextView
+        android:id="@+id/info_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back_login"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="@string/ui_order_confirmation"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/page_titles"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/info_login">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/address_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:background="@drawable/rectangle"
+                android:padding="@dimen/activity_vertical_margin"
+                android:text="@string/address"
+                android:textColor="@color/text_color"
+                android:textColorHint="#ffffff"
+                android:textSize="@dimen/modal_text" />
+
+
+            <LinearLayout
+                android:id="@+id/password_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/rectangle"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:text="@string/ui_total"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/modal_text" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:text="@string/price"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textColorHint="#ffffff"
+                    android:textSize="@dimen/modal_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/discount_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/rectangle"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:text="@string/ui_discount"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/modal_text" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:text="@string/discount"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textColorHint="#ffffff"
+                    android:textSize="@dimen/modal_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/new_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:background="@drawable/rectangle"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:text="@string/ui_new_total"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/modal_text" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/new_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:text="@string/ui_new_total"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textColorHint="#ffffff"
+                    android:textSize="@dimen/modal_text" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/buttonContinue_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_style"
+                android:enabled="true"
+                android:text="@string/place_order"
+                android:textAllCaps="true"
+                android:textColor="@color/button_text" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
